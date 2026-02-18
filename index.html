@@ -6,13 +6,23 @@
   <title>Mi primer AR</title>
   <!-- Libreria A-frame -->
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <!-- libreria de Ar.js -->
+   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 </head>
-<body>
+<body style="overflow: hidden; margin: 0;">
 
-<a-scene>
-  <a-box position="2 1.5 -3" color="tomato"></a-box>
-  <a-sphere position="1 1 -4" color="skyblue"></a-sphere>
-  <a-plane rotation="-90 0 0" width="6" height="6" color="#7BC8A4"></a-plane>
+<a-scene embedded arjs>
+  
+  <a-marker preset="kanji">
+    <a-box 
+      position="0 0.5 0"
+      color="red"
+      scale="2 2 2">
+    </a-box>
+  </a-marker>
+
+  <a-entity camera></a-entity>
+
 </a-scene>
 
 </body>
