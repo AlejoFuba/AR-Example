@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practica AR</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi primer AR</title>
+  <!-- Libreria A-frame -->
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
 </head>
-<!-- include A-Frame obviously -->
-<script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
-<!-- include ar.js for A-Frame -->
-<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-<body style='margin : 0px; overflow: hidden;'>
-  <a-scene embedded arjs>
-    <!-- create your content here. just a box for now -->
-     <!-- colocar texto en AR -->
-    <!-- <a-text value="Hello, World!"></a-text> -->
-    <!-- colocar una imagen -->
-    <!-- <a-image src="another-image.png"></a-image> -->
-    <!-- colocar un cubo en AR -->
-    <a-box position='0 0.5 0' material='opacity: 1; color: red;'></a-box>
-    <!-- define a camera which will move according to the marker position -->
-    <a-marker-camera preset='hiro'></a-marker-camera>
-    <!-- <a-marker-camera preset='kanji'></a-marker-camera> -->
-  </a-scene>
+<body>
+
+<a-scene>
+  <a-box position="2 1.5 -3" color="tomato"></a-box>
+  <a-sphere position="1 1 -4" color="skyblue"></a-sphere>
+  <a-plane rotation="-90 0 0" width="6" height="6" color="#7BC8A4"></a-plane>
+</a-scene>
+
 </body>
 </html>
