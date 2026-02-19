@@ -13,21 +13,27 @@
 
 <a-scene embedded arjs>
   
+  <a-assets>
+    <img id="miImagen" src="./pulp-fiction.jpg">
+  </a-assets>
+
   <a-marker preset="hiro">
-    <!-- <a-box 
+    <a-plane 
+      src="#miImagen"
       position="0 0.5 0"
-      color="red"
-      rotation="0 45 0"
-      scale="1 1 1">
-    </a-box> -->
-    <!-- insertamos un torus -->
-     <!-- <a-torus radius="0.5" radius-tubular="0.1" color="purple"></a-torus> -->
-     <!-- agregamos un cubo con animacion -->
-      <a-box
-      position="0 0.5 0"
-      color="orange"
-      animation="property: rotation; to: 0 360 0; loop: true; dur: 3000">
-      </a-box>
+      rotation="-90 0 0"
+      width="1"
+      height="1">
+    </a-plane>
+    <!-- agregamos texto -->
+    <!-- <a-text 
+      value="Hola mundo aumentado"
+      color="white"
+      align="center"
+      position="0 1 0"
+      rotation="-90 0 0"
+      width="2">
+    </a-text> -->
   </a-marker>
 
   <a-entity camera></a-entity>
