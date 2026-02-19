@@ -2,22 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Mi primer AR</title>
   <!-- Libreria A-frame -->
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   <!-- libreria de Ar.js -->
    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 </head>
-<body style="overflow: hidden; margin: 0;">
+<!-- no es lo ideal embeber estilos -->
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
 
-<a-scene embedded arjs>
+  a-scene {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+  }
+</style>
+<body>
+
+<a-scene embedded arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
   
-  <a-marker preset="kanji">
-    <a-box 
-      position="0 0.5 0"
-      color="red">
-    </a-box>
+  <a-marker preset="hiro">
+    <a-torus radius="0.5" radius-tubular="0.1" color="purple"></a-torus>
   </a-marker>
 
   <a-entity camera></a-entity>
