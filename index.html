@@ -2,28 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi primer AR</title>
   <!-- Libreria A-frame -->
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   <!-- libreria de Ar.js -->
    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-   <style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-
-  a-scene {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-  }
-</style>
 </head>
 
-<body>
+<body style="overflow: hidden; margin: 0;">
 
 <a-scene embedded arjs>
   
