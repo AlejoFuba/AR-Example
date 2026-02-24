@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mi primer AR</title>
+  <!-- Libreria A-frame -->
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <!-- libreria de Ar.js -->
+   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+   <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+  <a-scene embedded arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
+    
+    <!-- cargar varios assets -->
+    <a-assets>
+      <a-asset-item id="miModeloAR" src="./Assets/ar-model3d.glb"></a-asset-item>
+    </a-assets>
+
+    <a-marker preset="hiro">
+      <!-- Modelo 3D -->
+      <a-entity gltf-model="#miModeloAR"
+        position="0 0 0"
+        scale="0.5 0.5 0.5"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 4000">
+      </a-entity>
+    </a-marker>
+
+    <a-entity camera></a-entity>
+
+  </a-scene>
+
+</body>
+</html>
