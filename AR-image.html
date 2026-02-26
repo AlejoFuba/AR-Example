@@ -12,7 +12,8 @@
 </head>
 <body>
 
-  <a-scene embedded arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
+  <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
+        vr-mode-ui="enabled: false">
     
     <!-- cargar assets -->
     <a-assets>
@@ -26,7 +27,7 @@
         position="0 0.5 0"
         rotation="-90 0 0"
         width="1"
-        height="1">
+        height="1.5">
       </a-plane>
 
     </a-marker>
